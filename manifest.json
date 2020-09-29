@@ -1,0 +1,12 @@
+ {
+  "name": "VK Messages Label Return",
+  "version": "1.0",
+  "description": "This extension brings 'messages' instead of 'messenger' back on the vk.com",
+  "manifest_version": 2,
+  
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://vk.com/*"]
+  }]
+  
+}
