@@ -13,23 +13,23 @@ function correctPageTitle() {
 }
 
 window.onload = function() {
-    const titleEl = document.getElementsByTagName("title")[0];
-    const docEl = document.documentElement;
+  const titleEl = document.getElementsByTagName("title")[0];
+  const docEl = document.documentElement;
 
-    if (docEl && docEl.addEventListener) {
-        docEl.addEventListener("DOMSubtreeModified", function(evt) {
-            const t = evt.target;
-            if (t === titleEl || (t.parentNode && t.parentNode === titleEl)) {
-                correctPageTitle();
-            }
-        }, false);
-    } else {
-        document.onpropertychange = function() {
-            if (window.event.propertyName == "title") {
-                correctPageTitle();
-            }
-        };
-    }
+  if (docEl && docEl.addEventListener) {
+    docEl.addEventListener("DOMSubtreeModified", function(evt) {
+      const t = evt.target;
+      if (t === titleEl || (t.parentNode && t.parentNode === titleEl)) {
+        correctPageTitle();
+      }
+    }, false);
+  } else {
+    document.onpropertychange = function() {
+      if (window.event.propertyName == "title") {
+        correctPageTitle();
+      }
+    };
+  }
 };
 
 correctPageTitle();
