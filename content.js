@@ -1,6 +1,6 @@
 const dictionary = {
   "Messenger": "Messages",
-  "Мессенджер": "Сообщениия"
+  "Мессенджер": "Сообщения"
 }
 
 function correctPageTitle() {
