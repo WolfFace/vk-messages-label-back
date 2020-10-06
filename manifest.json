@@ -8,6 +8,8 @@
   "content_scripts": [{
     "js": ["content.js"],
     "matches": ["https://vk.com/*"]
-  }]
+  }],
+  
+  "permissions": ["tabs", "https://vk.com/*"]
   
 }
