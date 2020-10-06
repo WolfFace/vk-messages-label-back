@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "This extension brings 'messages' instead of 'messenger' back on the vk.com",
   "manifest_version": 2,
-  "icons": ["icon.png"]
+  "icons": {"128": "icon.png"},
   
   "content_scripts": [{
     "js": ["content.js"],
